@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'VT323';
+  src: url("/fonts/VT323/VT323-Regular.ttf");
+}
+
+html {
+  background-color: #1e1e1e;
+  color: #888788;
+  font-family: 'VT323', monospace;
+  font-size: 40px;
+  color: lime;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+#title {
+  font-size: 40px;
+  margin: 10px 20px;
+}
+
+#controls {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 20px;
+}
+
+.control-row {
+  display: flex;
+}
+
+.control-title {
+  width: 150px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.button {
+  text-decoration: underline;
+  cursor: pointer;
+  margin-right: 10px;
+  color: #0f8f0f;
+}
+
+.button.toggled {
+  color: lime;
+}
+
+.button:active {
+  color: darkgreen;
+}
+
+#container {
+  position: absolute;
+  top: 0px; right: 0px;
+  bottom: 0px; left: 0px;
+}
+
+#plot {
+}
+
+#error {
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  font-size: 30px;
+  color: orange;
+}

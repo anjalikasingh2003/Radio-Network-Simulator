@@ -1,0 +1,70 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>disaster.radio simulator visualizer test</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div id="title">disaster.radio network simulator</div>
+    <div id="container">
+      <svg id="plot">
+      </svg>
+    </div>
+    <div id="error"></div>
+    <div id="controls">
+      <div class="control-row">
+        <div class="control-title">label mode:</div>
+        <div class="button" my-model="label" my-value="none" onclick="setLabelMode('none')">none</div>
+        <div class="button" my-model="label" my-value="id" onclick="setLabelMode('id')">id</div>
+        <div class="button" my-model="label" my-value="mac" onclick="setLabelMode('mac')">address</div>
+      </div>
+      <div class="control-row">
+        <div class="control-title">packet mode:</div>
+        <div class="button" my-model="mode" my-value="emoji" onclick="setViewMode('emoji')">emoji</div>
+        <div class="button" my-model="mode" my-value="packet" onclick="setViewMode('packet')">packet</div>
+      </div>
+      <div class="control-row">
+        <div class="control-title">broadcast visual:</div>
+        <div class="button" my-model="broadcast" my-value="on" onclick="setBroadcastMode('on')">on</div>
+        <div class="button" my-model="broadcast" my-value="off" onclick="setBroadcastMode('off')">off</div>
+      </div>
+      <div class="control-row">
+        <div class="control-title">simulation speed:</div>
+        <div class="button" my-model="timeDistortion" my-value="10" onclick="setTimeDistortion(10)">0.1x</div>
+        <div class="button" my-model="timeDistortion" my-value="4" onclick="setTimeDistortion(4)">0.25x</div>
+        <div class="button" my-model="timeDistortion" my-value="2" onclick="setTimeDistortion(2)">0.5x</div>
+        <div class="button" my-model="timeDistortion" my-value="1" onclick="setTimeDistortion(1)">1x</div>
+        <div class="button" my-model="timeDistortion" my-value="0.5" onclick="setTimeDistortion(0.5)">2x</div>
+      </div>
+      <div class="control-row">
+        <div class="control-title">animation speed:</div>
+        <div class="button" my-model="animationSpeed" my-value="1000fixed" onclick="setAnimationSpeed('1000fixed')">1s fixed</div>
+        <div class="button" my-model="animationSpeed" my-value="2" onclick="setAnimationSpeed('2')">0.5x sim speed</div>
+        <div class="button" my-model="animationSpeed" my-value="1" onclick="setAnimationSpeed('1')">1x sim speed</div>
+      </div>
+    </div>
+    <script src="bundle.js"></script>
+    <style>
+    h1{
+        color: #0099FF;
+    }
+    p{
+        color: #000000;
+    }
+    tr{
+        background-color: #FF8448;
+        font-size: 80px;
+    }
+    td{
+        background-color: #0099FF;
+        border: 10px solid green;
+
+    }
+    table{
+        color: #FFFFFF;
+    }
+    </style>
+  </body>
+</html>
